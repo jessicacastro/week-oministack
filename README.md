@@ -8,3 +8,11 @@
 - []
 - []
 
+
+#### ANOTAÇÕES
+
+##### PACKAGE.JSON 
+> Arquivo presente em toda a aplicação que envolva javascript, seja backend, frontend ou mobile.
+
+
+
