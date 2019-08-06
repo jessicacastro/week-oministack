@@ -42,4 +42,17 @@
     server.listen(3333);
     ```
 
+2. Após iniciar o servidor com o comando 'node src/server.js', ele não irá retornar nada se acessarmos no navegador, para mostrar algo devemos por métodos http ou outros para definir o que nossa aplicação espera e o que irá responder, nesse caso estamos setando quando não passamos qualquer valor para a raiz, somente o / puro. De acordo com o ES6, uma arrowFunction foi feita, mas podemos fazer no método antigo de função do ES5: 
+    ```
+    server.get('/'m (req, res) => {
+        return res.send("HELLO WORLD");
+    });
+    ```
+Em caso de você querer retornar algum parâmetro passado na URL como por exemplo: localhost:3333?name=User, utilize: 
+    ```
+    server.get('/'m (req, res) => {
+        return res.send(`Hello ${req.query.name}`);
+    });
+    ```
+
 
