@@ -54,5 +54,11 @@
         return res.send(`Hello ${req.query.name}`);
     });
     ```
+    Mas nesse caso estamos apenas passando o básico (base) de requisições para o express no Node.js. Temos uma rota, uma requisição, fazemos algo com a requisição e devolvemos uma resposta para o frontend. 
+
+    Como desenvolveremos API + FRONT, utilizaremos uma estrutura de dados unificada, chamada JSON (JavaScript Object Notation), como vemos no exemplo abaixo:
+    ```
+    { nome: 'Jessica' }
+    ```
 
 
