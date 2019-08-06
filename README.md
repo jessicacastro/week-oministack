@@ -1,5 +1,7 @@
 # WEEK OMINISTACK 
 
+Sempre vemos códigos comentados com o básico quando falamos de github. Dessa vez decidi fazer diferente, resolvi repassar o conteúdo aprendido por passos bem detalhados, separando os mesmos por backend e frontend. A seguir temos algumas informações úteis de utilitários durante o desenvolvimento e as respectivas documentações.
+
 #### EXTENSÕES, PACOTES E OUTROS UTILIZADOS (WINDOWS)
 
 - Chocolately
