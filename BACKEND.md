@@ -1,6 +1,7 @@
 ## BACKEND
 
 ### PASSO A PASSO DO PROJETO (RESUMO)
+
 _Para acesso a informações mais detalhadas, continue descendo a página_
 
 1. [x] Criar a pasta backend
@@ -29,17 +30,17 @@ _Para acesso a informações mais detalhadas, continue descendo a página_
 > Ferramente do node responsável por não termos que ficar reiniciando o servidor node na mão a cada alteração que realizamos no código, ele irá gerenciar isso e reiniciar a aplicação para nós. O -D no final é para indicar que essa ferramente só será utilizada em desenvolvimento e não em produção.
 
 1. Após instalar o nodemon, abra o "package.json" e após "licence", coloque a chave (propriedade) "scripts". Essa chave é um objeto, onde você pode colocar scripts que irão rodar com o yarn. Criaremos o script chamado "dev", que será responsável rodar o nodemon até o nosso arquivo server.js:
-    ```
-    "scripts": {
-        "dev": "nodemon src/server.js"
-    }
-    ```
-    Após isso, basta rodar o yarn com o nome do seu script e ele começará a rodar o servidor de uma forma diferente, inserindo diretamente as alterações:
-    ```
-    yarn dev
-    ```
-    _Podemos utilizar dois terminais no VS Code, dividindo o mesmo em dois na parte superior direita do terminal. Isso é útil para utilizarmos um terminal para olhar o status da aplicação e o outro para instalar dependências e outras alterações no sistema._
-    ![](imgs/vscode-sliced.PNG)
+   ```
+   "scripts": {
+       "dev": "nodemon src/server.js"
+   }
+   ```
+   Após isso, basta rodar o yarn com o nome do seu script e ele começará a rodar o servidor de uma forma diferente, inserindo diretamente as alterações:
+   ```
+   yarn dev
+   ```
+   _Podemos utilizar dois terminais no VS Code, dividindo o mesmo em dois na parte superior direita do terminal. Isso é útil para utilizarmos um terminal para olhar o status da aplicação e o outro para instalar dependências e outras alterações no sistema._
+   ![](imgs/vscode-sliced.PNG)
 
 #### YARN.LOCK
 
@@ -93,3 +94,35 @@ _Para acesso a informações mais detalhadas, continue descendo a página_
        });
    });
    ```
+
+### REFATORANDO A CONFIGURAÇÃO
+
+Apesar de termos feito tudo diretamente no server.js, o ideal é que tenhamos apenas um arquivos para definir todas as rotas que o nosso servidor pode ser acessado pelo front, logo criaremos um routes.js na pasta "SRC". Após criar os arquivos você deve seguir os seguintes passos:
+
+1. Importar o express da mesma forma que importamos no server.js
+2. Declarar uma constante para routers onde a mesma recebe "express.Routes();"
+3. Incluir a rota (anteriormente inserida em server.js) no arquivo.
+4. Garantir que o método HTTP antes visto como server.MÉTODO, seja routes.MÉTODO:
+   ```
+   routes.get("/", (req, res) => {
+        return res.json({
+            message: `Hello ${req.query.name}`,
+            nome: req.query.name,
+        });
+   });
+   ```
+5. Exportar o arquivo de rotas para que ele seja visto pelo arquivo server, definindo o nome que você quer dar para esse arquivo ao ser importado.
+    ```
+    module.exports = routes;
+    ```
+6. Importar o arquivo routes no arquivo server
+    ```
+    const routes = require('./routes');
+    ```
+    Lembrando que, apesar de estar no mesmo diretório, é importante colocarmos o "./" para realizar o acesso corretamente do arquivo routes.
+
+Após fazer isso, nosso server estará assim:
+![](imgs/serverjsrefat.PNG)
+
+E nosso routes estará assim:
+![](imgs/routesrefat.PNG)
