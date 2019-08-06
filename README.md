@@ -1,5 +1,10 @@
 # WEEK OMINISTACK 
 
+https://img.shields.io/github/issues/jessicacastro/week-oministack https://img.shields.io/github/forks/jessicacastro/week-oministack
+https://img.shields.io/github/stars/jessicacastro/week-oministack https://img.shields.io/github/license/jessicacastro/week-oministack 
+https://img.shields.io/twitter/url/https/github.com%2Fjessicacastro%2Fweek-oministack
+
+
 ## BACKEND
 
 ### EXTENSÕES, PACOTES E OUTROS UTILIZADOS (WINDOWS)
