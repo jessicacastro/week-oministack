@@ -1,15 +1,4 @@
-# WEEK OMINISTACK 
-
 ## BACKEND
-
-### EXTENSÕES, PACOTES E OUTROS UTILIZADOS (WINDOWS)
-
-- Chocolately
-- Yarn 
-- Node 
-- Npm 
-- VS Code (Tema drácula, font: Fira Code)
-- JSON Viewer (Chrome)
 
 ### INICIANDO
 
