@@ -4,20 +4,12 @@
  **/
 const express = require("express");
 
+// Importanto arquivo de rotas.
+const routes = require('./routes');
+
 // Criando um servidor do express.
 const server = express();
 
-/**
- * Toda vez que eu chamo o server desta forma, temos todos os métodos HTTP.
- * (GET -> buscar informação, POST -> inserir uma informação, PUT -> Editar uma informação, DELETE -> Deletar uma informação).
- * O método PUT e o método DELETE não é possível enviar via HTML.
- * Ele está esperando alguma coisa. Neste caso, não estamos passando nada na rota, apenas a rota raiz.
- */
-server.get("/", (req, res) => {
-  return res.json({
-    message: `Hello ${req.query.name}`,
-    nome: req.query.name,
-  });
-});
+server.use(routes);
 
 server.listen(3333); // PORTA QUE O SERVIDOR ESTÁ OUVINDO
