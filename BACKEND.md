@@ -1,6 +1,7 @@
 ## BACKEND
 
-### INICIANDO
+### PASSO A PASSO DO PROJETO (RESUMO)
+_Para acesso a informações mais detalhadas, continue descendo a página_
 
 1. [x] Criar a pasta backend
 2. [x] Iniciar o projeto com o comando "yarn init -y" dentro da pasta _backend_
@@ -29,11 +30,6 @@
 #### SRC
 
 > Pasta que gere o código mexido pelo time desenvolvedor no projeto. O arquivo dentro, no caso desta aplicação backend, 'server.js' é indiferente. Você pode nomeá-lo como desejar.
-
-### SHORTCUTS VS CODE
-
-- CTRL + SHIFT + P: Para abrir a tela de search
-  - Você pode procurar por install e selecionar o "Install 'code' command in PATH" para abrir diretamente seu projeto do terminal no VS Code com o comando "code + [pasta do projeto]" ou "code ." (Caso já esteja na pasta do mesmo no terminal)
 
 ### CONFIGURAÇÃO INICIAL
 
