@@ -48,7 +48,7 @@
         return res.send("HELLO WORLD");
     });
     ```
-Em caso de você querer retornar algum parâmetro passado na URL como por exemplo: localhost:3333?name=User, utilize: 
+    Em caso de você querer retornar algum parâmetro passado na URL como por exemplo: localhost:3333?name=User, utilize: 
     ```
     server.get('/'m (req, res) => {
         return res.send(`Hello ${req.query.name}`);
