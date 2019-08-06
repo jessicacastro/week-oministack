@@ -33,5 +33,13 @@
     - Você pode procurar por install e selecionar o "Install 'code' command in PATH" para abrir diretamente seu projeto do terminal no VS Code com o comando "code + [pasta do projeto]" ou "code ." (Caso já esteja na pasta do mesmo no terminal)
 
 
+### CONFIGURAÇÃO INICIAL
+
+1. Ao criar o server.js, devemos instanciar o express, definí-lo em uma variável constante de server e indicar qual porta o mesmo ouvirá (aqui usamos a porta 3333):
+    ```
+    const express = require('express');
+    const server = express();
+    server.listen(3333);
+    ```
 
 
