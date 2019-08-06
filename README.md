@@ -17,7 +17,7 @@
 > Nesta aplicação utilizamos o express.
 
 #### EXPRESS
-> Microframework para o node 
+> Microframework para o node que ajuda a lidar com rotas (exemplo de rota:www.example.com/minharota:1), requisições e respostas para o servidor.
 
 ### SHORTCUTS VS CODE 
 - CTRL + SHIFT + P: Para abrir a tela de search
