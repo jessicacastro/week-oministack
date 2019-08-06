@@ -9,6 +9,7 @@ _Para acesso a informações mais detalhadas, continue descendo a página_
 4. [x] Adicionar o express com o comando "yarn add express"
 5. [x] Adicionar a pasta src com seu arquivo principal, no nosso caso server.js
 6. [x] Definir a porta que o servidor irá ouvir com server.listen(port)
+7. [x] Adicionar o nodemon com o comando "yarn add nodemon -D"
 
 ### ANOTAÇÕES
 
@@ -22,6 +23,23 @@ _Para acesso a informações mais detalhadas, continue descendo a página_
 #### EXPRESS
 
 > Microframework para o node que ajuda a lidar com rotas (exemplo de rota:www.example.com/minharota:1), requisições e respostas para o servidor.
+
+#### NODEMON
+
+> Ferramente do node responsável por não termos que ficar reiniciando o servidor node na mão a cada alteração que realizamos no código, ele irá gerenciar isso e reiniciar a aplicação para nós. O -D no final é para indicar que essa ferramente só será utilizada em desenvolvimento e não em produção.
+
+1. Após instalar o nodemon, abra o "package.json" e após "licence", coloque a chave (propriedade) "scripts". Essa chave é um objeto, onde você pode colocar scripts que irão rodar com o yarn. Criaremos o script chamado "dev", que será responsável rodar o nodemon até o nosso arquivo server.js:
+    ```
+    "scripts": {
+        "dev": "nodemon src/server.js"
+    }
+    ```
+    Após isso, basta rodar o yarn com o nome do seu script e ele começará a rodar o servidor de uma forma diferente, inserindo diretamente as alterações:
+    ```
+    yarn dev
+    ```
+    _Podemos utilizar dois terminais no VS Code, dividindo o mesmo em dois na parte superior direita do terminal. Isso é útil para utilizarmos um terminal para olhar o status da aplicação e o outro para instalar dependências e outras alterações no sistema._
+    ![](imgs/vscode-sliced.PNG)
 
 #### YARN.LOCK
 
