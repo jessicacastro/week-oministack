@@ -10,6 +10,10 @@ Sempre vemos códigos comentados com o básico quando falamos de github. Dessa v
 - Npm 
 - VS Code (Tema drácula, font: Fira Code)
 - JSON Viewer (Chrome)
+- Express
+- Nodemon
+- INSOMNIA Rest
+- MongoDB (Banco de Dados)
 
 #### SHORTCUTS VS CODE
 
