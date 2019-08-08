@@ -16,6 +16,12 @@ routes.get("/", (req, res) => {
   });
 });
 
+routes.post("/devs", (req, res) => {
+  return res.json({
+    message: `Dev ${req.body.nome} cadastrado com sucesso`
+  });
+});
+
 
 //Exportando as rotas para o server reconhecer as rotas.
 module.exports = routes;
